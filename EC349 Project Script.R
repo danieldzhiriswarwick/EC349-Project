@@ -1,5 +1,5 @@
 #EC349 Project Script
-git 
+
 #Clear
 cat("\014")  
 rm(list=ls())
