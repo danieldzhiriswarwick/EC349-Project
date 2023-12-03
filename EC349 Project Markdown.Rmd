@@ -26,31 +26,31 @@ This project aims to predict ratings assigned to each review, utilising both the
 ## Data Understanding and Preparation
 The Yelp data set consists of separate files for each object type: business, review, user, check-in, and tips from users. The trimmed version of the reviews data set we use contains 1,398,056 reviews, where users give a star rating complemented by a text review. Figure 1 shows that the star ratings do not follow a uniform distribution, with 67% of reviews having at least four stars. Moreover, the differences between ratings are inconsistent across the entire range of star ratings. The difference between a 2-star and a 3-star rating might carry a different level of significance than the difference between a 4-star and a 5-star rating. Therefore, review rating prediction is treated as a classification problem, and a non-linear model is required to make accurate predictions.
 
-```{r 1, fig.cap = "Figure 1: Distribution of Reviews by Star Rating", out.width="50%", fig.align='center'}
+```{r 1, fig.cap = "**Figure 1:** *Distribution of Reviews by Star Rating*", out.width="50%", fig.align='center'}
 knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Assignment/StarPie.jpg")
 ```
   
 The data set also provides information on a business's average rating, which indicates its overall reputation and customer satisfaction. Furthermore, businesses with higher average ratings are likely to receive better reviews. Customers often base their expectations on the overall reputation of a business, which can influence the star rating they assign in their reviews. Including the average rating of a business in the model allows it to account for the baseline satisfaction associated with a particular establishment.
 
-```{r 2, fig.cap="Figure 2: Boxplot of Business Ratings Across Star Categories", out.width="50%", fig.align='center'}
+```{r 2, fig.cap="**Figure 2:** *Boxplot of Business Ratings Across Star Categories*", out.width="50%", fig.align='center'}
 knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Assignment/Business_stars.jpg")
 ```
 
 Similarly, we include a variable for average ratings given by a user, as user-specific ratings offer insights into the individual's reviewing patterns and inclinations. For instance, individuals who consistently assign low ratings may utilise the Yelp platform primarily for sharing negative reviews.
 
-```{r 3, fig.cap="Figure 3: Boxplot of User's Average Ratings Across Star Categories", out.width="50%", fig.align='center'}
+```{r 3, fig.cap="**Figure 3:** *Boxplot of User's Average Ratings Across Star Categories*", out.width="50%", fig.align='center'}
 knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Assignment/User_stars.jpg")
 ```
 
 Additionally, we find that longer reviews tend to have lower ratings. Negative experiences or issues with a product or service could be more complex and might require more details. Customers may need to share specific examples when describing their negative encounters, leading to longer reviews. Additionally, the heightened emotional impact of negative experiences may foster greater emotional engagement, prompting customers to express their dissatisfaction in more extensive and detailed reviews.
 
-```{r 4, fig.cap="Figure 4: Regression Line of Review Length and Star Ratings", out.width="50%", fig.align='center'}
+```{r 4, fig.cap="**Figure 4:** *Regression Line of Review Length and Star Ratings*", out.width="50%", fig.align='center'}
 knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Assignment/Length_stars.jpg")
 ```
 
 Lastly, the fourth variable incorporated into the model is the normalised sentiment score derived from the text review. Treating a review as a composite of its constituent words, each word is assigned a sentiment score ranging from -5 to 5 based on the AFINN sentiment lexicon. The cumulative sentiment score is determined by summing the sentiment values assigned to each individual word in the review, and this total is normalised by the number of tokens in the review. Furthermore, a set of negation words is employed^[Negation words: "not", "no", "never", "without", "isn't", "aren't", "doesn't", "don't", "didn't", "hasn't", "haven't"]; if any of these words precede a sentiment word, the sentiment score is reversed in the opposite direction.
 
-```{r 5, fig.cap="Figure 5: Words that contributed the most to sentiment when they followed a ‘negating’ word", out.width="50%", fig.align='center'}
+```{r 5, fig.cap="**Figure 5:** *Words that contributed the most to sentiment when they followed a ‘negating’ word*", out.width="50%", fig.align='center'}
 knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Assignment/Negation_words.jpg")
 ```
 
@@ -58,13 +58,13 @@ knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Assignment
 
 Since the paper assumes a complex non-linear relationship between the star rating and the selected explanatory variables, the focus will be on classification trees. Table 1 (see Appendix) shows that the independent variables have a moderately high correlation, and one strong predictor is likely to be always used in the top split. Consequently, the predictions from the bagged trees will be highly correlated and averaging them will not lead to a large reduction in variance. Therefore, I have implemented a random forest model, which effectively decorrelates the trees.
 
-```{r 6, fig.cap="Figure 6: Results from random forests with p = 4 predictors. The test error is displayed as a function of the number of trees. Each coloured line corresponds to a different value of m, the number of predictors available for splitting at each interior tree node. Random forests (m < p) lead to an improvement over bagging (m = p). A single classification tree has an error rate of 48%", out.width="50%", fig.align='center'}
+```{r 6, fig.cap="**Figure 6:** *Results from random forests with p = 4 predictors. The test error is displayed as a function of the number of trees. Each coloured line corresponds to a different value of m, the number of predictors available for splitting at each interior tree node. Random forests (m < p) lead to an improvement over bagging (m = p). A single classification tree has an error rate of 48%*", out.width="50%", fig.align='center'}
 knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Assignment/OOBError.jpg")
 ```
 
 ## Results and Evaluation
 
-Table 2 (see Appendix) shows the confusion matrix for the train data set, a random sample of 10,000 observations. The accuracy of the random forest model is 60.4%, whereas the majority class percentage is 46.2%.
+Table 2 (see Appendix) shows the confusion matrix for the test data set, a random sample of 10,000 observations. The accuracy of the random forest model is 60.4%, whereas the majority class percentage is 46.2%.
 
 However, the misclassification error rate is significantly higher for 2, 3 and 4-star reviews, possibly due to the imbalanced nature of the data set with 5-star reviews dominating. Therefore, the model may be biased towards the majority class. Future studies could employ techniques like class weighting or resampling.
 
@@ -79,7 +79,7 @@ I implemented the John Rollins' DS Methodology due to its structured approach an
 McKinsey (2022). *Why business must heed customer reviews.* [online] Available at: https://www.mckinsey.com/capabilities/operations/our-insights/why-business-must-heed-customer-reviews.
 
 ## Appendix
-<center>Table 1: Correlation Matrix</center>
+<center>**Table 1:** *Correlation Matrix*</center>
 ||afinn_sentiment_norm|business_rating|average_stars|total_tokens|
 |:---:|:---:|:---:|:---:|:---:|
 |**afinn_sentiment_norm**|1|0.304|0.376|-0.299|
@@ -87,7 +87,7 @@ McKinsey (2022). *Why business must heed customer reviews.* [online] Available a
 |**average_stars**|0.376|0.305|1|-0.097|
 |**total_tokens**|-0.299|-0.067|-0.097|1|
 
-<center>Table 2: Confusion Matrix for Testing Data using Random Forest</center>
+<center>**Table 2:** *Confusion Matrix for Testing Data using Random Forest*</center>
 ||1|2|3|4|5|Class Error|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |**1**|1306|362|188|96|96|36.2%|
