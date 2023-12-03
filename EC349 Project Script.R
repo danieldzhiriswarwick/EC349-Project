@@ -1,4 +1,4 @@
-#EC349 Project Script
+#EC349 Project Script (u2150766)
 #Clear
 cat("\014")  
 rm(list=ls())
@@ -71,10 +71,10 @@ ggplot(percentage_data, aes(x = "", y = percentage, fill = as.factor(stars))) +
   geom_text(aes(label = sprintf("%.1f%%", percentage)),
             position = position_stack(vjust = 0.5), size = 3) +
   coord_polar("y") +
-  labs(title = "Percentage of Reviews by Star Rating",
-       fill = "Rating") +
-  theme_void() +
-  theme(plot.title = element_text(hjust = 0.5))
+  labs(fill = "Rating") +
+  theme_void()
+# Save the figure as jpg
+# ggsave("StarPie.jpg", width = 10, height = 8, units = c("cm"), dpi = 300)
 
 #Set seed for reproducibility
 set.seed(123)
@@ -92,7 +92,9 @@ rev_data <- rev_data %>%
 ggplot(rev_data, aes(x = factor(stars), y = business_rating)) +
   geom_boxplot() +
   labs(x = "Stars", y = "Business Rating") +
-  ggtitle("Stars vs Business Rating")
+  theme(panel.background = element_blank())
+# Save the figure as jpg
+# ggsave("Business_stars.jpg", width = 10, height = 8, units = c("cm"), dpi = 300)
 
 #Merge with the average ratings given by a user from user_data_small
 rev_data <- rev_data %>%
@@ -102,7 +104,9 @@ rev_data <- rev_data %>%
 ggplot(rev_data, aes(x = factor(stars), y = average_stars)) +
   geom_boxplot() +
   labs(x = "Stars", y = "Average of Ratings Given by a User") +
-  ggtitle("Stars vs Average of Ratings Given by the User")
+  theme(panel.background = element_blank())
+# Save the figure as jpg
+# ggsave("User_stars.jpg", width = 10, height = 8, units = c("cm"), dpi = 300)
 
 #SENTIMENT ANALYSIS
 #Keeping only the text variable to make sentiment analysis computationally efficient
@@ -194,7 +198,10 @@ negated_words_count %>%
   ggplot(aes(total_contribution, word2, fill = total_contribution > 0)) +
   geom_col(show.legend = FALSE) +
   labs(x = "Sentiment value * number of occurrences",
-       y = "Words preceded by negation words")
+       y = "Words preceded by negation words") +
+  theme(panel.background = element_blank())
+# Save the figure as jpg
+# ggsave("Negation_words.jpg", width = 10, height = 8, units = c("cm"), dpi = 300)
 
 #AFINN Values to be reversed due to the presence of negation words
 negated_words <- bigrams_separated %>%
@@ -207,7 +214,7 @@ negated_sent <- negated_words %>%
   group_by(review_id) %>%
   summarize(value = sum(value, na.rm = TRUE))
 
-#TF_IDF (not used)
+#TF_IDF (not in use after evaluation)
 #review_tf_idf <- review_words %>%
 #  bind_tf_idf(word, review_id, n)
 #review_tf_idf <- review_tf_idf %>%
@@ -217,7 +224,6 @@ negated_sent <- negated_words %>%
 #  summarize(review_sentiment = sum(tf_idf * value, na.rm = TRUE))
 #review_sent <- merge(x = review_sent, y = rev_data[, c("review_id", "stars")], 
 #                    by = "review_id", all.x = TRUE)
-#
 
 #Total AFINN sentiment for each review (not accounting for negation words)
 afinn_review_sent <- review_words %>%
@@ -259,8 +265,10 @@ ggplot(afinn_review_sent, aes(x = total_tokens, y = stars)) +
 
 ggplot(afinn_review_sent, aes(x = total_tokens, y = stars)) +
   geom_smooth(aes(group = 1), method = "lm", se = FALSE, color = "red", linetype = "solid") +
-  labs(title = "Regression Line of Lenth of Review vs. Stars",
-       x = "Length of Review", y = "Stars")
+  labs(x = "Length of Review", y = "Stars") +
+  theme(panel.background = element_blank())
+# Save the figure as jpg
+# ggsave("Length_stars.jpg", width = 10, height = 8, units = c("cm"), dpi = 300)
 
 #Checking for multicollinearity among the chosen independent variables
 independent_var <- afinn_review_sent[, c("afinn_sentiment_norm", "business_rating",
@@ -368,5 +376,6 @@ ggplot(results_df, aes(x = ntree, y = test_error, color = factor(m))) +
                      values = c("4" = "blue", "2" = "green", "1" = "red"),
                      labels = c("4" = "m = p = 4", "2" = "m = 2", "1" = "m = 1")) +
   theme(legend.position = c(0.85, 0.9),
-        panel.grid = element_blank(),
         panel.background = element_blank())
+# Save the figure as jpg
+# ggsave("OOBError.jpg", width = 10, height = 8, units = c("cm"), dpi = 300)
