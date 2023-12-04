@@ -1,3 +1,4 @@
+#GitHub: https://github.com/danieldzhiriswarwick/EC349-Project
 #EC349 Project Script (u2150766)
 #Clear
 cat("\014")  
