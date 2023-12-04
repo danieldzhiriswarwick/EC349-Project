@@ -82,6 +82,11 @@ set.seed(123)
 rev_small_index <- sample(nrow(review_data_small), 30000)
 rev_data <- review_data_small[rev_small_index, ]
 
+# Check for duplicates
+duplicates_check <- rev_data[duplicated(rev_data$review_id), ]
+# Display duplicated rows 
+print(duplicates_check)
+
 #Merge with business rating from business_data
 colnames(business_data)[colnames(business_data) == "stars"] <- "business_rating"
 rev_data <- rev_data %>%
