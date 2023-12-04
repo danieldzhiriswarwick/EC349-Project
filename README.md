@@ -33,12 +33,12 @@ The data on this form relates to your submission of coursework. The date and tim
 
 Related articles
 
-Reg. 11 Academic Integrity (from 4 Oct 2021)
+[Reg. 11 Academic Integrity (from 4 Oct 2021)](https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwarwick.ac.uk%2Fservices%2Fgov%2Fcalendar%2Fsection2%2Fregulations%2Facademic_integrity%2F&data=05%7C01%7CDaniel.Dzhiris%40warwick.ac.uk%7C4dd142f8cc154001823908dbf19221e9%7C09bacfbd47ef446592653546f2eaf6bc%7C0%7C0%7C638369382185581610%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=0OqHr5uGoQKoK9sL55oDcxgrYdg9khdMfsM2HYzipWQ%3D&reserved=0)
 
-Guidance on Regulation 11
+[Guidance on Regulation 11](https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwarwick.ac.uk%2Fservices%2Faro%2Fdar%2Fquality%2Faz%2Facintegrity%2Fframework%2Fguidancereg11%2F&data=05%7C01%7CDaniel.Dzhiris%40warwick.ac.uk%7C4dd142f8cc154001823908dbf19221e9%7C09bacfbd47ef446592653546f2eaf6bc%7C0%7C0%7C638369382185592423%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Gyf8WwwhSeW4lDZ%2Fp6rYM69aPL%2FcttTEJMf9gByimMU%3D&reserved=0)
 
-Proofreading Policy  
+[Proofreading Policy](https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwarwick.ac.uk%2Fservices%2Faro%2Fdar%2Fquality%2Fcategories%2Fexaminations%2Fpolicies%2Fv_proofreading%2F&data=05%7C01%7CDaniel.Dzhiris%40warwick.ac.uk%7C4dd142f8cc154001823908dbf19221e9%7C09bacfbd47ef446592653546f2eaf6bc%7C0%7C0%7C638369382185599671%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=hhOKIhjLkABVkqrr3xdimFP3OS9ip8gHVWWtJ9fc1Yo%3D&reserved=0)
 
-Education Policy and Quality Team
+[Education Policy and Quality Team](https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwarwick.ac.uk%2Fservices%2Faro%2Fdar%2Fquality%2Faz%2Facintegrity%2Fframework%2Fguidancereg11%2F&data=05%7C01%7CDaniel.Dzhiris%40warwick.ac.uk%7C4dd142f8cc154001823908dbf19221e9%7C09bacfbd47ef446592653546f2eaf6bc%7C0%7C0%7C638369382185606096%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=I37bxJHoMANANUFMtyg60V6ICisUWF%2BDYfK4MZYElO0%3D&reserved=0)
 
-Academic Integrity (warwick.ac.uk)
+[Academic Integrity (warwick.ac.uk)](https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwarwick.ac.uk%2Fstudents%2Flearning-experience%2Facademic_integrity&data=05%7C01%7CDaniel.Dzhiris%40warwick.ac.uk%7C4dd142f8cc154001823908dbf19221e9%7C09bacfbd47ef446592653546f2eaf6bc%7C0%7C0%7C638369382185612455%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=9DlkCWxUEjegEag3edEX7x5ten4E8Y83EZXPVryoIUo%3D&reserved=0)
