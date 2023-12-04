@@ -567,6 +567,11 @@ category. Currently, there is no variable indicating the business
 category, and prospective research projects could implement a machine
 learning classifier to predict a business’s industry based on its text
 reviews.</p>
+<p>Lastly, it is important to note that sentiment analysis proved to be
+resource-intensive in terms of both time and memory. Consequently, the
+total number of observations used in training and testing the model was
+limited to 30,000. Exploring a larger set of observations could be
+valuable to assess if it produces different results.</p>
 </div>
 <div id="ds-methodology" class="section level2">
 <h2>DS Methodology</h2>
@@ -583,6 +588,16 @@ the standard tidytext list of stop words.</p>
 </div>
 <div id="statement-on-the-most-difficult-challenge" class="section level2">
 <h2>Statement on the Most Difficult Challenge</h2>
+<p>The most difficult challenge was to select the relevant predictors,
+as the Yelp data set has many different variables. The appropriate data
+is crucial for developing an accurate model, and including a large
+number of variables is not always beneficial since it reduces the
+interpretability of the model. Therefore, I have relied on logical
+reasoning to identify relevant features. The key was to unravel the
+narrative within the data, which allowed me to create a logical
+storyline. I particularly enjoyed using descriptive statistics and
+visualisation techniques to understand the data, assess its quality, and
+discover initial insights about the reviews.</p>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>

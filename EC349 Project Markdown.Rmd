@@ -110,11 +110,15 @@ However, the misclassification error rate is significantly higher for 2, 3 and 4
 
 Furthermore, the Yelp data set contains businesses from various sectors, including hotels and restaurants. Due to the unique characteristics of text reviews specific to each business type, it is important to perform Review Rating Prediction independently for each category. Currently, there is no variable indicating the business category, and prospective research projects could implement a machine learning classifier to predict a business's industry based on its text reviews.
 
+Lastly, it is important to note that sentiment analysis proved to be resource-intensive in terms of both time and memory. Consequently, the total number of observations used in training and testing the model was limited to 30,000. Exploring a larger set of observations could be valuable to assess if it produces different results.
+
 ## DS Methodology
 
 I implemented the John Rollins' DS Methodology due to its structured approach and iterative nature. The project started with understanding the goal of the analysis and identifying what technique will be best to address it. While delving deeper into the data, I found myself revisiting earlier stages to make refinements. Specifically, during the evaluation phase, I discovered that the word "good" had been omitted from sentiment analysis since it was part of the stop words list. Consequently, I went back to the data preparation stage to create a customised stop words list, omitting words like "good" and "great" from the standard tidytext list of stop words.
 
 ## Statement on the Most Difficult Challenge
+
+The most difficult challenge was to select the relevant predictors, as the Yelp data set has many different variables. The appropriate data is crucial for developing an accurate model, and including a large number of variables is not always beneficial since it reduces the interpretability of the model. Therefore, I have relied on logical reasoning to identify relevant features. The key was to unravel the narrative within the data, which allowed me to create a logical storyline. I particularly enjoyed using descriptive statistics and visualisation techniques to understand the data, assess its quality, and discover initial insights about the reviews.
 
 ## References
 
