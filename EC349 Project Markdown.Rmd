@@ -97,3 +97,8 @@ McKinsey (2022). *Why business must heed customer reviews.* [online] Available a
 |**3**|31|49|64|62|26|72.4%|
 |**4**|57|114|262|488|351|61.6%|
 |**5**|112|174|430|1420|4130|34.1%|
+
+<center>**Figure 7:** *Variable Importance Plot*</center>
+```{r 7, out.width="70%", fig.align='center'}
+knitr::include_graphics("/Users/danieldzhiris/Downloads/EC349 Project/Graphs/Var_imp_plot.png")
+```
