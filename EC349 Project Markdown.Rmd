@@ -114,7 +114,7 @@ Lastly, it is important to note that sentiment analysis proved to be resource-in
 
 ## DS Methodology
 
-I implemented the John Rollins' DS Methodology due to its structured approach and iterative nature. The project started with understanding the goal of the analysis and identifying what technique will be best to address it. While delving deeper into the data, I found myself revisiting earlier stages to make refinements. Specifically, during the evaluation phase, I discovered that the word "good" had been omitted from sentiment analysis since it was part of the stop words list. Consequently, I went back to the data preparation stage to create a customised stop words list, omitting words like "good" and "great" from the standard tidytext list of stop words.
+I implemented John Rollins’ DS Methodology due to its structured approach and iterative nature. The project started with understanding the goal of the analysis and identifying what technique would best address it. While delving deeper into the data, I found myself revisiting earlier stages to make refinements. Specifically, during the evaluation phase, I discovered that the word “good” had been omitted from sentiment analysis since it was part of the stop words list. Consequently, I went back to the data preparation stage to create a customised stop words list, omitting words like “good” and “great” from the standard tidytext list of stop words.
 
 ## Statement on the Most Difficult Challenge
 
