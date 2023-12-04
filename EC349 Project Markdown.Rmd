@@ -1,8 +1,10 @@
 ---
 title: "Yelp Review Rating Prediction"
 subtitle: 'EC349 Data Science For Economists (2023/24)'
-author: "Daniel Dzhiris (u2150766)"
-date: "2023-12-02"
+author:
+- name: "Daniel Dzhiris (u2150766)"
+  affiliation: "[GitHub](https://github.com/danieldzhiriswarwick/EC349-Project)"
+date: "2023-12-05"
 output: html_document
 ---
 
